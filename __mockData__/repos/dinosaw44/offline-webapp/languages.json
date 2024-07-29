@@ -1,5 +1,8 @@
-[
-    "TypeScript",
-    "Svelte",
-    "SCSS"
-]
+{
+    "Svelte": 25682,
+    "TypeScript": 4734,
+    "JavaScript": 1363,
+    "HTML": 595,
+    "SCSS": 505
+  }
+  
