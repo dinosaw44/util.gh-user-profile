@@ -8,13 +8,13 @@ export async function getProfile(username: string) {
 
     const user = await client.getUser(username)
     const repos = await client.getRepos(user)
-    
+
     return {
         avatar: user.avatar_url,
         projects: await Promise.all(repos.map(async repo => ({
             name: repo.name,
             description: repo.description,
-            repo: repo.url,
+            repo: repo.html_url,
             site: repo.homepage,
             showcase: repo.topics.includes('showcase'),
             topics: repo.topics.filter(topic => topic !== 'showcase'),
